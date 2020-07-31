@@ -1,0 +1,24 @@
+<%- include("partials/header")-%>
+
+<table class="table table-hover table-sm cart-table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% tuples.forEach(tuple => { %>
+        <tr>
+            <td> <strong><%=tuple.name%></strong></td>
+            <td><%=tuple.email%></td>
+            <td><%=tuple.mobile%></td>
+            <td><%=tuple.gender%></td>
+        </tr>
+<%});%>
+    </tbody>
+</table>
+
+<%- include("partials/footer")-%>
